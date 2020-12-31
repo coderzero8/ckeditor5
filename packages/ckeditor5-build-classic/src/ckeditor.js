@@ -40,7 +40,6 @@ import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
 
 
-
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.

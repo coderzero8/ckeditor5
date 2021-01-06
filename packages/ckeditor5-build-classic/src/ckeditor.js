@@ -30,38 +30,15 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
-
-import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
-import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
-import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js'
-import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
-
-
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
-import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
+import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
+import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
+import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
 
-
-import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock.js';
-import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak.js';
-import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
-import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters.js';
-import SpecialCharactersArrows from '@ckeditor/ckeditor5-special-characters/src/specialcharactersarrows.js';
-
-import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency.js';
-import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials.js';
-import SpecialCharactersText from '@ckeditor/ckeditor5-special-characters/src/specialcharacterstext.js';
-import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
-import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript.js';
-
-import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript.js';
-import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
-import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
-import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
-import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -89,7 +66,12 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+
+	Alignment
+
+
+
 ];
 
 // Editor configuration.
@@ -104,6 +86,8 @@ ClassicEditor.defaultConfig = {
 			'link',
 			'bulletedList',
 			'numberedList',
+			'|',			
+			'alignment',
 			'|',
 			'indent',
 			'outdent',

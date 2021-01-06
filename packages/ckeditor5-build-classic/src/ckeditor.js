@@ -30,10 +30,12 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
-import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js'
+import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
+
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
@@ -69,8 +71,8 @@ ClassicEditor.builtinPlugins = [
 	TextTransformation,
 
 	Alignment
-
-
+	FontBackgroundColor,
+	RemoveFormat,
 
 ];
 
@@ -78,12 +80,19 @@ ClassicEditor.builtinPlugins = [
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
+			'undo',
+			'redo',
+			'removeFormat',
 			
 			'heading',
 			'|',
 			'bold',
 			'italic',
 			'link',
+
+			'fontBackgroundColor',
+
+
 			'bulletedList',
 			'numberedList',
 			'|',			
@@ -96,8 +105,7 @@ ClassicEditor.defaultConfig = {
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
-			'undo',
-			'redo'
+			
 		]
 	},
 	image: {

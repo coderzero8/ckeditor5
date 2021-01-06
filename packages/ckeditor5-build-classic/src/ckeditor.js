@@ -35,7 +35,7 @@ import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js'
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
 // import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
 
-// import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 // import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 // import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 // import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
@@ -75,7 +75,7 @@ ClassicEditor.builtinPlugins = [
 	// FontFamily,
 	// FontColor,
 
-	// FontSize,
+	FontSize,
 	// Highlight,
 
 ];
@@ -88,7 +88,7 @@ ClassicEditor.defaultConfig = {
 			'redo',
 			'removeFormat',
 			'heading',
-			// 'fontSize',
+			'fontSize',
 
 
 			// 'fontFamily',
@@ -411,7 +411,7 @@ ClassicEditor.defaultConfig = {
 					color: 'hsl(270, 75%, 60%)',
 					label: 'Purple'
 				}
-   
+  
         ],
         columns: 5
     },
@@ -434,17 +434,17 @@ ClassicEditor.defaultConfig = {
   //       ],
   //       supportAllValues: true
   //   },
-  //   fontSize: {
-  //       options: [
-  //           9,
-  //           11,
-  //           13,
-  //           'default',
-  //           17,
-  //           19,
-  //           21
-  //       ]
-  //   },
+    fontSize: {
+        options: [
+            9,
+            11,
+            13,
+            'default',
+            17,
+            19,
+            21
+        ]
+    },
 
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'

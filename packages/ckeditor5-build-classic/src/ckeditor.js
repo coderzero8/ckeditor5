@@ -33,15 +33,29 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js'
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
-// import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
-
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
+
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
-// import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak.js';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
+
+import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock.js';
+
+import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters.js';
+import SpecialCharactersArrows from '@ckeditor/ckeditor5-special-characters/src/specialcharactersarrows.js';
+import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency.js';
+import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials.js';
+
+import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
+import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript.js';
+import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript.js';
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
+import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
+
+import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -83,6 +97,21 @@ ClassicEditor.builtinPlugins = [
 	HorizontalLine,
 	Underline,
 
+
+	SpecialCharacters,
+	SpecialCharactersArrows,
+	SpecialCharactersCurrency,
+	SpecialCharactersEssentials,
+	SpecialCharactersText,
+
+	Strikethrough,
+	Subscript,
+	Superscript,
+	TableCellProperties,
+	TableProperties,
+	TodoList,
+
+
 ];
 
 // Editor configuration.
@@ -100,6 +129,10 @@ ClassicEditor.defaultConfig = {
 			'fontColor',
 			'fontBackgroundColor',
 
+			'strikethrough',
+			'superscript',
+			'subscript',
+
 			'|',
 			'bold',
 			'italic',
@@ -110,8 +143,7 @@ ClassicEditor.defaultConfig = {
 			'numberedList',
 			'|',			
 			'alignment',
-			// 'highlight',
-
+			'specialCharacters',
 			'|',
 			'indent',
 			'outdent',

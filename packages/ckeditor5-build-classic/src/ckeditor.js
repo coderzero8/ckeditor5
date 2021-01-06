@@ -40,6 +40,9 @@ import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 // import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak.js';
+import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
+
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -77,7 +80,8 @@ ClassicEditor.builtinPlugins = [
 
 	FontSize,
 	PageBreak,	
-	// Highlight,
+	HorizontalLine,
+	Underline,
 
 ];
 
@@ -100,6 +104,7 @@ ClassicEditor.defaultConfig = {
 			'bold',
 			'italic',
 			'link',	
+			'underline',
 
 			'bulletedList',
 			'numberedList',
@@ -111,6 +116,7 @@ ClassicEditor.defaultConfig = {
 			'indent',
 			'outdent',
 			'pageBreak',
+			'HorizontalLine',
 			'|',
 			'imageUpload',
 			'blockQuote',

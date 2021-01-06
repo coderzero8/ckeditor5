@@ -38,7 +38,7 @@ import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolo
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
-// import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -76,7 +76,7 @@ ClassicEditor.builtinPlugins = [
 	FontColor,
 
 	FontSize,
-	// Highlight,
+	Highlight,
 
 ];
 
@@ -104,7 +104,7 @@ ClassicEditor.defaultConfig = {
 			'numberedList',
 			'|',			
 			'alignment',
-			// 'highlight',
+			'highlight',
 
 			'|',
 			'indent',

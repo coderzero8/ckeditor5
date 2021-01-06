@@ -70,7 +70,7 @@ ClassicEditor.builtinPlugins = [
 	TableToolbar,
 	TextTransformation,
 
-	Alignment
+	Alignment,
 	FontBackgroundColor,
 	RemoveFormat,
 
@@ -83,7 +83,7 @@ ClassicEditor.defaultConfig = {
 			'undo',
 			'redo',
 			'removeFormat',
-			
+
 			'heading',
 			'|',
 			'bold',

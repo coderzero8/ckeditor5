@@ -41,21 +41,10 @@ import PageBreak from '@ckeditor/ckeditor5-page-break/src/pagebreak.js';
 import HorizontalLine from '@ckeditor/ckeditor5-horizontal-line/src/horizontalline.js';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 
-import IndentBlock from '@ckeditor/ckeditor5-indent/src/indentblock.js';
 
-import SpecialCharacters from '@ckeditor/ckeditor5-special-characters/src/specialcharacters.js';
-import SpecialCharactersArrows from '@ckeditor/ckeditor5-special-characters/src/specialcharactersarrows.js';
-import SpecialCharactersCurrency from '@ckeditor/ckeditor5-special-characters/src/specialcharacterscurrency.js';
-import SpecialCharactersEssentials from '@ckeditor/ckeditor5-special-characters/src/specialcharactersessentials.js';
-
-import Strikethrough from '@ckeditor/ckeditor5-basic-styles/src/strikethrough.js';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript.js';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript.js';
-import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
-import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
-import TodoList from '@ckeditor/ckeditor5-list/src/todolist';
 
-import LinkImage from '@ckeditor/ckeditor5-link/src/linkimage';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -96,22 +85,8 @@ ClassicEditor.builtinPlugins = [
 	PageBreak,	
 	HorizontalLine,
 	Underline,
-
-
-	SpecialCharacters,
-	SpecialCharactersArrows,
-	SpecialCharactersCurrency,
-	SpecialCharactersEssentials,
-	SpecialCharactersText,
-
-	Strikethrough,
 	Subscript,
 	Superscript,
-	TableCellProperties,
-	TableProperties,
-	TodoList,
-
-
 ];
 
 // Editor configuration.
@@ -128,11 +103,8 @@ ClassicEditor.defaultConfig = {
 			'fontFamily',
 			'fontColor',
 			'fontBackgroundColor',
-
-			'strikethrough',
 			'superscript',
 			'subscript',
-
 			'|',
 			'bold',
 			'italic',
@@ -143,7 +115,6 @@ ClassicEditor.defaultConfig = {
 			'numberedList',
 			'|',			
 			'alignment',
-			'specialCharacters',
 			'|',
 			'indent',
 			'outdent',

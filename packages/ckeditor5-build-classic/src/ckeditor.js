@@ -45,7 +45,8 @@ import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline.js';
 import Subscript from '@ckeditor/ckeditor5-basic-styles/src/subscript.js';
 import Superscript from '@ckeditor/ckeditor5-basic-styles/src/superscript.js';
 
-
+import TableCellProperties from '@ckeditor/ckeditor5-table/src/tablecellproperties';
+import TableProperties from '@ckeditor/ckeditor5-table/src/tableproperties';
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -87,6 +88,8 @@ ClassicEditor.builtinPlugins = [
 	Underline,
 	Subscript,
 	Superscript,
+	TableCellProperties,
+	TableProperties,
 ];
 
 // Editor configuration.
@@ -140,7 +143,9 @@ ClassicEditor.defaultConfig = {
 		contentToolbar: [
 			'tableColumn',
 			'tableRow',
-			'mergeTableCells'
+			'mergeTableCells',	
+			'tableProperties', 
+			'tableCellProperties'
 		]
 	},
 
@@ -456,7 +461,17 @@ ClassicEditor.defaultConfig = {
             21
         ]
     },
-
+	link: {
+		decorators: {
+			isExternal: {
+				mode: 'manual',
+				label: 'Open in a new tab',
+				attributes: {
+					target: '_blank'
+				}
+			}
+		}
+	},
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };

@@ -33,14 +33,12 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js'
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
-import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
-import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
+// import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
 
-import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
-import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
-import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
-import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
-import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
+// import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
+// import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
+// import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
+// import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}

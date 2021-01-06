@@ -33,13 +33,14 @@ import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformatio
 import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment.js'
 import RemoveFormat from '@ckeditor/ckeditor5-remove-format/src/removeformat.js';
 import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolor.js';
-import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
-import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
-
-import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
 import ImageInsert from '@ckeditor/ckeditor5-image/src/imageinsert.js';
 import ImageResize from '@ckeditor/ckeditor5-image/src/imageresize.js';
+
 import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
+import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
+import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
+import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 
 
 export default class ClassicEditor extends ClassicEditorBase {}
@@ -73,6 +74,11 @@ ClassicEditor.builtinPlugins = [
 	Alignment,
 	FontBackgroundColor,
 	RemoveFormat,
+	FontFamily,
+	FontColor,
+
+	FontSize,
+	Highlight,
 
 ];
 
@@ -83,20 +89,28 @@ ClassicEditor.defaultConfig = {
 			'undo',
 			'redo',
 			'removeFormat',
-
 			'heading',
+			'fontSize',
+
+
+			'fontFamily',
+			'fontColor',
+			'fontBackgroundColor',
+
 			'|',
 			'bold',
 			'italic',
 			'link',
 
-			'fontBackgroundColor',
+			
 
 
 			'bulletedList',
 			'numberedList',
 			'|',			
 			'alignment',
+			'highlight',
+
 			'|',
 			'indent',
 			'outdent',
@@ -123,6 +137,320 @@ ClassicEditor.defaultConfig = {
 			'mergeTableCells'
 		]
 	},
+
+		fontColor: {
+        colors: [
+
+
+	   			{
+					color: '#86BC25',
+					label: '#86BC25',
+				},
+				{
+					color: '#C4D600',
+					label: '#C4D600',
+				},
+
+				{
+					color: '#43B02A',
+					label: '#43B02A',
+				},
+				{
+					color: '#046A38',
+					label: '#046A38',
+				},
+				{
+					color: '#2C5234',
+					label: '#2C5234',
+				},
+
+
+
+
+				{
+					color: '#0097A9',
+					label: '#0097A9',
+				},
+				{
+					color: '#62B5E5',
+					label: '#62B5E5',
+				},
+
+				{
+					color: '#00A3E0',
+					label: '#00A3E0',
+				},
+				{
+					color: '#0076A8',
+					label: '#0076A8',
+				},
+				{
+					color: '#012169',
+					label: '#012169',
+				},
+
+
+
+
+				{
+					color: '#D0D0CE',
+					label: '#D0D0CE',
+				},
+				{
+					color: '#BBBCBC',
+					label: '#BBBCBC',
+				},
+
+				{
+					color: '#97999B',
+					label: '#97999B',
+				},
+				{
+					color: '#75787B',
+					label: '#75787B',
+				},
+				{
+					color: '#53565A',
+					label: '#53565A',
+				},
+
+
+
+		        {
+					color: 'hsl(0, 0%, 0%)',
+					label: 'Black'
+				},
+				{
+					color: 'hsl(0, 0%, 30%)',
+					label: 'Dim grey'
+				},
+				{
+					color: 'hsl(0, 0%, 60%)',
+					label: 'Grey'
+				},
+				{
+					color: 'hsl(0, 0%, 90%)',
+					label: 'Light grey'
+				},
+				{
+					color: 'hsl(0, 0%, 100%)',
+					label: 'White',
+					hasBorder: true
+				},
+				{
+					color: 'hsl(0, 75%, 60%)',
+					label: 'Red'
+				},
+				{
+					color: 'hsl(30, 75%, 60%)',
+					label: 'Orange'
+				},
+				{
+					color: 'hsl(60, 75%, 60%)',
+					label: 'Yellow'
+				},
+				{
+					color: 'hsl(90, 75%, 60%)',
+					label: 'Light green'
+				},
+				{
+					color: 'hsl(120, 75%, 60%)',
+					label: 'Green'
+				},
+				{
+					color: 'hsl(150, 75%, 60%)',
+					label: 'Aquamarine'
+				},
+				{
+					color: 'hsl(180, 75%, 60%)',
+					label: 'Turquoise'
+				},
+				{
+					color: 'hsl(210, 75%, 60%)',
+					label: 'Light blue'
+				},
+				{
+					color: 'hsl(240, 75%, 60%)',
+					label: 'Blue'
+				},
+				{
+					color: 'hsl(270, 75%, 60%)',
+					label: 'Purple'
+				}
+   
+        ],
+        columns: 5
+    },
+
+	fontBackgroundColor: {
+        colors: [
+				{
+					color: '#86BC25',
+					label: '#86BC25',
+				},
+				{
+					color: '#C4D600',
+					label: '#C4D600',
+				},
+
+				{
+					color: '#43B02A',
+					label: '#43B02A',
+				},
+				{
+					color: '#046A38',
+					label: '#046A38',
+				},
+				{
+					color: '#2C5234',
+					label: '#2C5234',
+				},
+
+
+
+
+				{
+					color: '#0097A9',
+					label: '#0097A9',
+				},
+				{
+					color: '#62B5E5',
+					label: '#62B5E5',
+				},
+
+				{
+					color: '#00A3E0',
+					label: '#00A3E0',
+				},
+				{
+					color: '#0076A8',
+					label: '#0076A8',
+				},
+				{
+					color: '#012169',
+					label: '#012169',
+				},
+
+
+
+
+				{
+					color: '#D0D0CE',
+					label: '#D0D0CE',
+				},
+				{
+					color: '#BBBCBC',
+					label: '#BBBCBC',
+				},
+
+				{
+					color: '#97999B',
+					label: '#97999B',
+				},
+				{
+					color: '#75787B',
+					label: '#75787B',
+				},
+				{
+					color: '#53565A',
+					label: '#53565A',
+				},
+		        {
+					color: 'hsl(0, 0%, 0%)',
+					label: 'Black'
+				},
+				{
+					color: 'hsl(0, 0%, 30%)',
+					label: 'Dim grey'
+				},
+				{
+					color: 'hsl(0, 0%, 60%)',
+					label: 'Grey'
+				},
+				{
+					color: 'hsl(0, 0%, 90%)',
+					label: 'Light grey'
+				},
+				{
+					color: 'hsl(0, 0%, 100%)',
+					label: 'White',
+					hasBorder: true
+				},
+				{
+					color: 'hsl(0, 75%, 60%)',
+					label: 'Red'
+				},
+				{
+					color: 'hsl(30, 75%, 60%)',
+					label: 'Orange'
+				},
+				{
+					color: 'hsl(60, 75%, 60%)',
+					label: 'Yellow'
+				},
+				{
+					color: 'hsl(90, 75%, 60%)',
+					label: 'Light green'
+				},
+				{
+					color: 'hsl(120, 75%, 60%)',
+					label: 'Green'
+				},
+				{
+					color: 'hsl(150, 75%, 60%)',
+					label: 'Aquamarine'
+				},
+				{
+					color: 'hsl(180, 75%, 60%)',
+					label: 'Turquoise'
+				},
+				{
+					color: 'hsl(210, 75%, 60%)',
+					label: 'Light blue'
+				},
+				{
+					color: 'hsl(240, 75%, 60%)',
+					label: 'Blue'
+				},
+				{
+					color: 'hsl(270, 75%, 60%)',
+					label: 'Purple'
+				}
+   
+        ],
+        columns: 5
+    },
+ 	fontFamily: {
+        options: [
+        	// 'default',
+        	'Calibri, Verdana, Geneva, sans-serif',		
+         	'Arial/Arial, Helvetica, sans-serif' ,
+            'Comic Sans MS/Comic Sans MS, cursive',
+            'Courier New/Courier New, Courier, monospace',
+            'Georgia/Georgia, serif',
+            'Lucida Sans Unicode/Lucida Sans Unicode, Lucida Grande, sans-serif',
+            'Tahoma/Tahoma, Geneva, sans-serif' ,
+            'Times New Roman/Times New Roman, Times, serif',
+            'Trebuchet MS/Trebuchet MS, Helvetica, sans-serif',         
+            'Verdana/Verdana, Geneva, sans-serif',	      	
+	        'Ubuntu, Arial, sans-serif',
+	        'Ubuntu Mono, Courier New, Courier, monospace',	        
+        ],
+        supportAllValues: true
+    },
+    fontSize: {
+        options: [
+            9,
+            11,
+            13,
+            'default',
+            17,
+            19,
+            21
+        ]
+    },
+
+
 	// This value must be kept in sync with the language defined in webpack.config.js.
 	language: 'en'
 };

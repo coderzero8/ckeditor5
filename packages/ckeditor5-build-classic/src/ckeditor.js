@@ -36,7 +36,7 @@ import FontBackgroundColor from '@ckeditor/ckeditor5-font/src/fontbackgroundcolo
 // import SimpleUploadAdapter from '@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter.js';
 
 import FontSize from '@ckeditor/ckeditor5-font/src/fontsize.js';
-// import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
+import FontColor from '@ckeditor/ckeditor5-font/src/fontcolor.js';
 import FontFamily from '@ckeditor/ckeditor5-font/src/fontfamily.js';
 // import Highlight from '@ckeditor/ckeditor5-highlight/src/highlight.js';
 
@@ -73,7 +73,7 @@ ClassicEditor.builtinPlugins = [
 	FontBackgroundColor,
 	RemoveFormat,
 	FontFamily,
-	// FontColor,
+	FontColor,
 
 	FontSize,
 	// Highlight,
@@ -92,7 +92,7 @@ ClassicEditor.defaultConfig = {
 
 
 			'fontFamily',
-			// 'fontColor',
+			'fontColor',
 			'fontBackgroundColor',
 
 			'|',
@@ -133,149 +133,149 @@ ClassicEditor.defaultConfig = {
 		]
 	},
 
-	// fontColor: {
- //        colors: [
+	fontColor: {
+        colors: [
 
 
-	//    			{
-	// 				color: '#86BC25',
-	// 				label: '#86BC25',
-	// 			},
-	// 			{
-	// 				color: '#C4D600',
-	// 				label: '#C4D600',
-	// 			},
+	   			{
+					color: '#86BC25',
+					label: '#86BC25',
+				},
+				{
+					color: '#C4D600',
+					label: '#C4D600',
+				},
 
-	// 			{
-	// 				color: '#43B02A',
-	// 				label: '#43B02A',
-	// 			},
-	// 			{
-	// 				color: '#046A38',
-	// 				label: '#046A38',
-	// 			},
-	// 			{
-	// 				color: '#2C5234',
-	// 				label: '#2C5234',
-	// 			},
-
-
-
-
-	// 			{
-	// 				color: '#0097A9',
-	// 				label: '#0097A9',
-	// 			},
-	// 			{
-	// 				color: '#62B5E5',
-	// 				label: '#62B5E5',
-	// 			},
-
-	// 			{
-	// 				color: '#00A3E0',
-	// 				label: '#00A3E0',
-	// 			},
-	// 			{
-	// 				color: '#0076A8',
-	// 				label: '#0076A8',
-	// 			},
-	// 			{
-	// 				color: '#012169',
-	// 				label: '#012169',
-	// 			},
+				{
+					color: '#43B02A',
+					label: '#43B02A',
+				},
+				{
+					color: '#046A38',
+					label: '#046A38',
+				},
+				{
+					color: '#2C5234',
+					label: '#2C5234',
+				},
 
 
 
 
-	// 			{
-	// 				color: '#D0D0CE',
-	// 				label: '#D0D0CE',
-	// 			},
-	// 			{
-	// 				color: '#BBBCBC',
-	// 				label: '#BBBCBC',
-	// 			},
+				{
+					color: '#0097A9',
+					label: '#0097A9',
+				},
+				{
+					color: '#62B5E5',
+					label: '#62B5E5',
+				},
 
-	// 			{
-	// 				color: '#97999B',
-	// 				label: '#97999B',
-	// 			},
-	// 			{
-	// 				color: '#75787B',
-	// 				label: '#75787B',
-	// 			},
-	// 			{
-	// 				color: '#53565A',
-	// 				label: '#53565A',
-	// 			},
+				{
+					color: '#00A3E0',
+					label: '#00A3E0',
+				},
+				{
+					color: '#0076A8',
+					label: '#0076A8',
+				},
+				{
+					color: '#012169',
+					label: '#012169',
+				},
 
 
 
-	// 	        {
-	// 				color: 'hsl(0, 0%, 0%)',
-	// 				label: 'Black'
-	// 			},
-	// 			{
-	// 				color: 'hsl(0, 0%, 30%)',
-	// 				label: 'Dim grey'
-	// 			},
-	// 			{
-	// 				color: 'hsl(0, 0%, 60%)',
-	// 				label: 'Grey'
-	// 			},
-	// 			{
-	// 				color: 'hsl(0, 0%, 90%)',
-	// 				label: 'Light grey'
-	// 			},
-	// 			{
-	// 				color: 'hsl(0, 0%, 100%)',
-	// 				label: 'White',
-	// 				hasBorder: true
-	// 			},
-	// 			{
-	// 				color: 'hsl(0, 75%, 60%)',
-	// 				label: 'Red'
-	// 			},
-	// 			{
-	// 				color: 'hsl(30, 75%, 60%)',
-	// 				label: 'Orange'
-	// 			},
-	// 			{
-	// 				color: 'hsl(60, 75%, 60%)',
-	// 				label: 'Yellow'
-	// 			},
-	// 			{
-	// 				color: 'hsl(90, 75%, 60%)',
-	// 				label: 'Light green'
-	// 			},
-	// 			{
-	// 				color: 'hsl(120, 75%, 60%)',
-	// 				label: 'Green'
-	// 			},
-	// 			{
-	// 				color: 'hsl(150, 75%, 60%)',
-	// 				label: 'Aquamarine'
-	// 			},
-	// 			{
-	// 				color: 'hsl(180, 75%, 60%)',
-	// 				label: 'Turquoise'
-	// 			},
-	// 			{
-	// 				color: 'hsl(210, 75%, 60%)',
-	// 				label: 'Light blue'
-	// 			},
-	// 			{
-	// 				color: 'hsl(240, 75%, 60%)',
-	// 				label: 'Blue'
-	// 			},
-	// 			{
-	// 				color: 'hsl(270, 75%, 60%)',
-	// 				label: 'Purple'
-	// 			}
+
+				{
+					color: '#D0D0CE',
+					label: '#D0D0CE',
+				},
+				{
+					color: '#BBBCBC',
+					label: '#BBBCBC',
+				},
+
+				{
+					color: '#97999B',
+					label: '#97999B',
+				},
+				{
+					color: '#75787B',
+					label: '#75787B',
+				},
+				{
+					color: '#53565A',
+					label: '#53565A',
+				},
+
+
+
+		        {
+					color: 'hsl(0, 0%, 0%)',
+					label: 'Black'
+				},
+				{
+					color: 'hsl(0, 0%, 30%)',
+					label: 'Dim grey'
+				},
+				{
+					color: 'hsl(0, 0%, 60%)',
+					label: 'Grey'
+				},
+				{
+					color: 'hsl(0, 0%, 90%)',
+					label: 'Light grey'
+				},
+				{
+					color: 'hsl(0, 0%, 100%)',
+					label: 'White',
+					hasBorder: true
+				},
+				{
+					color: 'hsl(0, 75%, 60%)',
+					label: 'Red'
+				},
+				{
+					color: 'hsl(30, 75%, 60%)',
+					label: 'Orange'
+				},
+				{
+					color: 'hsl(60, 75%, 60%)',
+					label: 'Yellow'
+				},
+				{
+					color: 'hsl(90, 75%, 60%)',
+					label: 'Light green'
+				},
+				{
+					color: 'hsl(120, 75%, 60%)',
+					label: 'Green'
+				},
+				{
+					color: 'hsl(150, 75%, 60%)',
+					label: 'Aquamarine'
+				},
+				{
+					color: 'hsl(180, 75%, 60%)',
+					label: 'Turquoise'
+				},
+				{
+					color: 'hsl(210, 75%, 60%)',
+					label: 'Light blue'
+				},
+				{
+					color: 'hsl(240, 75%, 60%)',
+					label: 'Blue'
+				},
+				{
+					color: 'hsl(270, 75%, 60%)',
+					label: 'Purple'
+				}
    
- //        ],
- //        columns: 5
- //    },
+        ],
+        columns: 5
+    },
 
 	fontBackgroundColor: {
         colors: [

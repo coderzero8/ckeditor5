@@ -78,7 +78,7 @@ ClassicEditor.builtinPlugins = [
 	// FontColor,
 
 	// FontSize,
-	Highlight,
+	// Highlight,
 
 ];
 
@@ -106,7 +106,7 @@ ClassicEditor.defaultConfig = {
 			'numberedList',
 			'|',			
 			'alignment',
-			'highlight',
+			// 'highlight',
 
 			'|',
 			'indent',
